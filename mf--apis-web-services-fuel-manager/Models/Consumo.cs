@@ -2,6 +2,7 @@
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Reflection.Metadata;
 
 namespace mf__apis_web_services_fuel_manager.Models
 {
@@ -15,6 +16,7 @@ namespace mf__apis_web_services_fuel_manager.Models
         [Required]
         public DateTime Data { get; set; }
         [Required]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Valor { get; set; }
         [Required]
         public TipoCombustivel Tipo { get; set; }
